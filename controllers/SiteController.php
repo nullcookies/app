@@ -120,6 +120,17 @@ class SiteController
 
     }
 
+    public function actiongetImage()
+    {
+        $file = file_get_contents(__DIR__.'/../images/' . $_GET['img'], true);
+        echo $file;
+    }
+
+    public function actionIndexget_image()
+    {
+
+    }
+
     private function thumbnail($src, $dist, $dis_width = 100)
     {
 

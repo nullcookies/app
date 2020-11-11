@@ -45,8 +45,8 @@
 			result = $.parseJSON(result);
 
 			if( result.success ){
-				original_image = '/../images/'+(result.success).split('_')[1];
-				name = '/../images/'+result.success;
+				original_image = '/get_image?img='+(result.success).split('_')[1];
+				name = '/get_image?img='+result.success;
 				html = '';
 				html+= '<div class="image__item"><a class="lightbox" href="#'+result.success+'">' +
 					 '<img src="'+ name +'"/>' +
@@ -98,12 +98,12 @@
 				html = '';
 				result.forEach(function(obj) {
 					html += '<div class="image__item"><a class="lightbox" href="#'+obj.thumbnail_image+'">' +
-						'<img src="/../images/'+ obj.thumbnail_image +'"/>' +
+						'<img src="/get_image?img='+ obj.thumbnail_image +'"/>' +
 						'</a>' +
 						'<button type="button" class="btn btn-danger btn-sm delete-btn" data-id="'+ obj.id + '">Delete</button>' +
 
 						'<div class="lightbox-target" id="'+obj.thumbnail_image+'">' +
-						'<img src="/../images/' + obj.original_image +'"/>' +
+						'<img src="/get_image?img=' + obj.original_image +'"/>' +
 						'<a class="lightbox-close" href="#"></a>' +
 						'</div></div>'
 				});

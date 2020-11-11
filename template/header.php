@@ -16,7 +16,7 @@
     <script defer src="/template/js/fontawesome.min.js"></script>
 
 
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="shortcut icon" href="/template/images/favicon.ico">
 </head><!--/head-->
 
 <body>

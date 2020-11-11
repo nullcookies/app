@@ -29,14 +29,14 @@ require_once(ROOT.'/template/header.php');
                         <? foreach ($images as $image): ?>
                             <div class="image__item">
                                 <a class="lightbox" href="#<?= $image['thumbnail_image']; ?>">
-                                    <img src="/../images/<?= $image['thumbnail_image']; ?>"/>
+                                    <img src="/get_image?img=<?= $image['thumbnail_image']; ?>"/>
                                 </a>
                                 <button type='button' class='btn btn-danger btn-sm delete-btn'
                                         data-id="<?= $image['id']; ?>">Delete
                                 </button>
                                 <div data-id="<?= $image['id']; ?>" class="lightbox-target"
                                      id="<?= $image['thumbnail_image']; ?>">
-                                    <img src="/../images/<?= $image['original_image']; ?>"/>
+                                    <img src="/get_image?img=<?= $image['original_image']; ?>"/>
                                     <a class="lightbox-close" href="#"></a>
                                 </div>
                             </div>
